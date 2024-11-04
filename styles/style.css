@@ -34,7 +34,6 @@
 
 body {
     font-family: 'Patricia Serif', serif;
-    background-color: var(--color-primary); 
     color: var(--color-black);
 }
 
@@ -68,7 +67,6 @@ nav {
     cursor: pointer;
 }
 
-
 .nav-links a {
     text-decoration: none;
     font-weight: 600;
@@ -97,7 +95,6 @@ nav {
     transform: scaleX(1);
 }
 
-/* Base styles remain the same */
 
 /* Tablet Styles (up to 768px) */
 @media (max-width: 768px) {
@@ -179,5 +176,45 @@ nav {
     }
 }
 
+/* Hero Section*/
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 80px 20px;
+    background: linear-gradient(rgba(33, 218, 219, 0.8), rgba(77, 148, 230, 0.8)), url('../assets/images/LG.png');
+    background-size:cover;
+    color: var(--color-white);
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.25rem;
+    max-width: 600px;
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    background-color: var(--color-secondary);
+    color: var(--color-white);
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: var(--color-tertiary);
+}
 
 
