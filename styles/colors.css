@@ -1,0 +1,41 @@
+/* colors.css */
+
+
+
+/* Background Colors */
+.primary-bg {
+    background-color: var(--color-primary);
+}
+
+.secondary-bg {
+    background-color: var(--color-secondary);
+}
+
+.tertiary-bg {
+    background-color: var(--color-tertiary);
+}
+
+.white-bg {
+    background-color: var(--color-white);
+}
+
+.grey-bg {
+    background-color: var(--color-light-grey);
+}
+
+/* Text Colors */
+.primary-text {
+    color: var(--color-primary);
+}
+
+.secondary-text {
+    color: var(--color-secondary);
+}
+
+.grey-text {
+    color: var(--color-dark-grey);
+}
+
+.black-text {
+    color: var(--color-black);
+}
