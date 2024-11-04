@@ -1,0 +1,79 @@
+/* Primary Background Colors */
+.primary-bg {
+    background-color: #21DADB;
+}
+
+.primary-bg2 {
+    background-color: #35BBDF;
+}
+
+.primary-bg3 {
+    background-color: #4D94E6;
+}
+
+/* Complementary Colors for Text and Accents */
+.primary-text {
+    color: #4E2D3E; /* Complement to #21DADB */
+}
+
+.secondary-text {
+    color: #3D2C47; /* Complement to #35BBDF */
+}
+
+.tertiary-text {
+    color: #3A314C; /* Complement to #4D94E6 */
+}
+
+/* Analogous Colors for Additional Depth */
+.primary-light {
+    background-color: #3BE1E3; /* Slightly lighter shade of #21DADB */
+}
+
+.primary-dark {
+    background-color: #1FB1B4; /* Slightly darker shade of #21DADB */
+}
+
+.secondary-light {
+    background-color: #56C5E6; /* Slightly lighter shade of #35BBDF */
+}
+
+.secondary-dark {
+    background-color: #2D9EB8; /* Slightly darker shade of #35BBDF */
+}
+
+.tertiary-light {
+    background-color: #6FA6F1; /* Slightly lighter shade of #4D94E6 */
+}
+
+.tertiary-dark {
+    background-color: #3C7CD9; /* Slightly darker shade of #4D94E6 */
+}
+
+/* Gradient Backgrounds */
+.gradient-primary {
+    background: linear-gradient(135deg, #21DADB, #35BBDF);
+}
+
+.gradient-secondary {
+    background: linear-gradient(135deg, #35BBDF, #4D94E6);
+}
+
+.gradient-tertiary {
+    background: linear-gradient(135deg, #21DADB, #4D94E6);
+}
+
+/* Accent Border Colors */
+.primary-border {
+    border-color: #1FB1B4; /* Matches .primary-dark */
+}
+
+.secondary-border {
+    border-color: #2D9EB8; /* Matches .secondary-dark */
+}
+
+.tertiary-border {
+    border-color: #3C7CD9; /* Matches .tertiary-dark */
+}
+
+
+/* Used AI to know which colors matches with what*/
