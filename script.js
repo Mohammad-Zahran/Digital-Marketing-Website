@@ -51,6 +51,32 @@ sections.forEach(section => {
     });
 });
 
+// Animate the hero section elements
+gsap.from('.hero-section h1', {
+    delay: 3.5,
+    duration: 1,
+    y: -50,
+    opacity: 0,
+    ease: 'power3.out',
+});
+
+gsap.from('.hero-section p', {
+    delay: 4,
+    duration: 1,
+    y: -30,
+    opacity: 0,
+    ease: 'power3.out',
+});
+
+gsap.from('.cta-button', {
+    delay: 4.2,
+    duration: 1,
+    scale: 2,
+    opacity: 0,
+    ease: 'back.out(1.7)',
+});
+
+
 const burgerMenu = document.querySelector('.burger-menu');
 const navLinks = document.querySelector('.nav-links');
 
