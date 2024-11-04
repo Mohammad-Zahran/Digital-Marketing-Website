@@ -13,6 +13,16 @@ gsap.from('.nav-logo img', {
     ease: 'back.out(1.7)',
 });
 
+gsap.from('.burger-menu img', {
+    delay: 2,
+    duration: 1,
+    scale: 0,
+    opacity: 0,
+    ease: 'back.out(1.7)',
+    rotation:720
+});
+
+
 // Animate navigation links on page load
 gsap.from('.nav-links a', {
     delay: 2,
@@ -31,11 +41,29 @@ sections.forEach(section => {
     gsap.from(section, {
         scrollTrigger: {
             trigger: section,
-            start: 'top bottom', // Start when the top of the section hits the bottom of the viewport
+            start: 'top bottom', 
         },
-        y: 100, // Animate from below
+        y: 100, 
         opacity: 0,
         duration: 1,
         ease: 'power1.out',
+        delay:3
     });
+});
+
+const burgerMenu = document.querySelector('.burger-menu');
+const navLinks = document.querySelector('.nav-links');
+
+burgerMenu.addEventListener('click', () => {
+    navLinks.classList.toggle('open');
+    
+    if (navLinks.classList.contains('open')) {
+        gsap.fromTo(
+            navLinks, 
+            { y: 50, opacity: 0 }, 
+            { y: 0, opacity: 1, duration: 0.5, ease: 'power1.out' } 
+        );
+    } else {
+        gsap.to(navLinks, { y: -50, opacity: 0, duration: 0.3, ease: 'power1.in' });
+    }
 });

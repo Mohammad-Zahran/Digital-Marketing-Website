@@ -55,8 +55,19 @@ nav {
 
 .nav-links {
     display: flex;
-    gap: 30px; 
+    gap: 30px;
 }
+
+.burger-menu img {
+    width: 40px; 
+    height: auto; 
+}
+
+.burger-menu {
+    display: none; /* Hide by default */
+    cursor: pointer;
+}
+
 
 .nav-links a {
     text-decoration: none;
@@ -86,20 +97,85 @@ nav {
     transform: scaleX(1);
 }
 
-/* Media Queries for Responsive Design */
+/* Base styles remain the same */
+
+/* Tablet Styles (up to 768px) */
 @media (max-width: 768px) {
+    /* Adjust the nav layout for tablets */
     nav {
-        flex-direction: column;
-        align-items: flex-start;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        padding: 10px 20px;
     }
 
+    .burger-menu {
+        display: block;
+    }
+
+    /* Style for nav links panel on tablets */
     .nav-links {
+        display: none;
         flex-direction: column;
-        gap: 10px; 
+        gap: 15px;
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: 50%; /* Adjust width as desired */
+        background-color: var(--color-white);
+        padding: 20px;
+        box-shadow: -5px 0 10px rgba(0, 0, 0, 0.2);
+        z-index: 1000;
     }
 
     .nav-links a {
-        padding: 10px 0; 
+        padding: 10px 0;
+    }
+
+    .nav-links.open {
+        display: flex;
+    }
+}
+
+/* Phone Styles (up to 480px) */
+@media (max-width: 480px) {
+    nav {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 8px 15px;
+        position: relative; 
+    }
+
+    .burger-menu {
+        display: block;
+        position: relative;
+        z-index: 1001; /* Keeps the burger icon on top of other elements */
+    }
+
+    /* Style for nav links panel on phones */
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        position: absolute; 
+        left: 50px; /* Matches the padding used in nav */
+        background-color: var(--color-white);
+        width: 100%; /* Adjusts width to fit under burger icon */
+        padding: 15px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Drop shadow for emphasis */
+        border-radius: 5px;
+        z-index: 1000;
+    }
+
+    .nav-links a {
+        padding: 8px 0;
+    }
+
+    .nav-links.open {
+        display: flex;
     }
 }
 
