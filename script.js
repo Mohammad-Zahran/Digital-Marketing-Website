@@ -134,6 +134,46 @@ reasonCards.forEach(card => {
     });
 });
 
+// Let's Connect section animation
+const letsConnectSection = document.querySelector('.lets-connect');
+const letsConnectText = document.querySelector('.lets-connect-text');
+const letsConnectImage = document.querySelector('.lets-connect-image');
+
+gsap.fromTo(
+    letsConnectText,
+    { x: -50, opacity: 0 }, // Initial state
+    {
+        x: 0,
+        opacity: 1,
+        duration: 1,
+        ease: 'power2.out',
+        scrollTrigger: {
+            trigger: letsConnectSection,
+            start: 'top 80%', // Start when the section is 80% into the viewport
+            once: true, // Animation only plays once
+        }
+    }
+);
+
+gsap.fromTo(
+    letsConnectImage,
+    { x: 50, opacity: 0, rotation: -360 }, 
+    {
+        x: 0,
+        opacity: 1,
+        rotation: 0, 
+        duration: 4,
+        ease: 'power2.out',
+        scrollTrigger: {
+            trigger: letsConnectSection,
+            start: 'top 80%', 
+            once: true,
+        }
+    }
+);
+
+
+
 
 // Burger menu functionality
 const burgerMenu = document.querySelector('.burger-menu');

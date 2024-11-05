@@ -467,7 +467,70 @@ a.cta-button{
     color: var(--color-dark-grey);
 }
 
+.lets-connect {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+    background-color: var(--color-light-grey); /* Use your root color variables */
+}
 
+.lets-connect-text {
+    flex: 1;
+    padding-right: 1rem;
+}
 
+.lets-connect-text h2 {
+    color: var(--color-primary);
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
 
+.lets-connect-text p {
+    color: var(--color-dark-grey);
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.lets-connect-text a {
+    color: var(--color-tertiary);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.lets-connect-text a:hover {
+    text-decoration: underline;
+}
+
+.lets-connect-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.lets-connect-image img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 8px; /* Optional rounded corners */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .lets-connect {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .lets-connect-text {
+        padding-right: 0;
+        margin-bottom: 1rem;
+    }
+
+    .lets-connect-image img {
+        max-width: 80%;
+    }
+}
 
