@@ -37,6 +37,24 @@ gsap.from('.nav-links a', {
     ease: 'power1.out',
 });
 
+// Burger menu functionality
+const burgerMenu = document.querySelector('.burger-menu');
+const navLinks = document.querySelector('.nav-links');
+
+burgerMenu.addEventListener('click', () => {
+    navLinks.classList.toggle('open');
+
+    if (navLinks.classList.contains('open')) {
+        gsap.fromTo(
+            navLinks,
+            { y: 50, opacity: 0 },
+            { y: 0, opacity: 1, duration: 0.5, ease: 'power1.out' }
+        );
+    } else {
+        gsap.to(navLinks, { y: -50, opacity: 0, duration: 0.3, ease: 'power1.in' });
+    }
+});
+
 // Optional: Add a scroll animation for a section when it enters the viewport
 const sections = document.querySelectorAll('section');
 
@@ -134,6 +152,8 @@ reasonCards.forEach(card => {
     });
 });
 
+
+
 // Let's Connect section animation
 const letsConnectSection = document.querySelector('.lets-connect');
 const letsConnectText = document.querySelector('.lets-connect-text');
@@ -192,20 +212,3 @@ gsap.fromTo(
 
 
 
-// Burger menu functionality
-const burgerMenu = document.querySelector('.burger-menu');
-const navLinks = document.querySelector('.nav-links');
-
-burgerMenu.addEventListener('click', () => {
-    navLinks.classList.toggle('open');
-
-    if (navLinks.classList.contains('open')) {
-        gsap.fromTo(
-            navLinks,
-            { y: 50, opacity: 0 },
-            { y: 0, opacity: 1, duration: 0.5, ease: 'power1.out' }
-        );
-    } else {
-        gsap.to(navLinks, { y: -50, opacity: 0, duration: 0.3, ease: 'power1.in' });
-    }
-});
