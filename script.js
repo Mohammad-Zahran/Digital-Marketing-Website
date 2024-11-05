@@ -1,4 +1,5 @@
 // script.js
+gsap.registerPlugin(ScrollTrigger);
 
 // Animate the navigation on page load
 gsap.from('nav', {
@@ -85,37 +86,37 @@ const expertiseCards = document.querySelectorAll('.card-item');
 const tl = gsap.timeline({
     scrollTrigger: {
         trigger: expertiseSection,
-        start: 'top 90%', 
-        end: 'bottom top', 
-        scrub: true, 
+        start: 'top 80%', 
+        end: 'top 0%',   
+        scrub: 1,       
+        once: true,     
     }
 });
 
 // Add animations for each card
 expertiseCards.forEach((card, index) => {
     tl.from(card, {
-        y: 50,
-        opacity: 0,
-        duration: 3,
+        y: 50,             
+        opacity: 0,       
+        duration: 1,     
         ease: 'power2.out',
-        stagger: 0.1, 
+        stagger: 0.1,     
     }, `-=${0.4 * index}`); 
 });
+
+
 
 // Select all reason cards
 const reasonCards = document.querySelectorAll('.reason');
 
-// Define the colors for hover effects
-const hoverColor = 'var(--color-primary)'; // Color when hovered
+const hoverColor = 'var(--color-primary)'; 
 
-// Add mouseenter and mouseleave events to each reason card
 reasonCards.forEach(card => {
     card.addEventListener('mouseenter', () => {
-        // Animate the card on hover
         gsap.to(card, {
-            scale: 1.05, // Scale up
-            boxShadow: '0 8px 16px rgba(0, 0, 0, 0.2)', // Enhance shadow
-            backgroundColor: hoverColor, // Change background color on hover
+            scale: 1.05, 
+            boxShadow: '0 8px 16px rgba(0, 0, 0, 0.2)', 
+            backgroundColor: hoverColor, 
             duration: 0.3,
             ease: 'power1.out',
         });
