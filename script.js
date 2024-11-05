@@ -140,20 +140,37 @@ const letsConnectText = document.querySelector('.lets-connect-text');
 const letsConnectImage = document.querySelector('.lets-connect-image');
 
 gsap.fromTo(
-    letsConnectText,
-    { x: -50, opacity: 0 }, // Initial state
+    letsConnectSection,
+    { backgroundColor: 'rgba(255, 255, 255, 0)' }, 
     {
-        x: 0,
-        opacity: 1,
-        duration: 1,
-        ease: 'power2.out',
+        backgroundColor: 'var(--color-light-grey)',
+        duration: 1.5,
         scrollTrigger: {
             trigger: letsConnectSection,
-            start: 'top 80%', // Start when the section is 80% into the viewport
-            once: true, // Animation only plays once
+            start: 'top 80%',
+            once: true,
         }
     }
 );
+
+
+gsap.fromTo(
+    letsConnectText,
+    { scale: 0.8, x: -50, opacity: 0 },
+    {
+        scale: 1, 
+        x: 0,
+        opacity: 1,
+        duration: 1.5,
+        ease: 'power2.out',
+        scrollTrigger: {
+            trigger: letsConnectSection,
+            start: 'top 80%',
+            once: true,
+        }
+    }
+);
+
 
 gsap.fromTo(
     letsConnectImage,
@@ -161,7 +178,7 @@ gsap.fromTo(
     {
         x: 0,
         opacity: 1,
-        rotation: 0, 
+        rotation: 0,
         duration: 4,
         ease: 'power2.out',
         scrollTrigger: {
