@@ -253,8 +253,9 @@ nav {
     align-items: flex-start; 
     justify-content: center; 
     flex-wrap: wrap; 
-    gap: 20px; 
+    gap: 20px;  
 }
+
 
 .card-list .card-item {
     list-style: none; 
@@ -269,7 +270,7 @@ nav {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
     transition: transform 0.3s; 
     text-decoration: none; 
-    position: relative; /* Add position relative for absolute positioning of button if needed */
+    position: relative; 
 }
 
 .card-list .card-link:hover {
