@@ -247,6 +247,22 @@ nav {
     padding: 20px; 
 }
 
+.expertise-section h1 {
+    font-size: 1.5rem;            
+    font-weight: bold;           
+    text-align: center;           
+    margin-bottom: 0.5rem;       
+    letter-spacing: 1.5px;        
+    text-transform: uppercase;    
+    padding: 0.5rem 1rem;    
+    color: var(--color-secondary);     
+}
+
+/* Optional: Add a subtle shadow to give depth */
+.expertise-section h1 {
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
 .card-wrapper {
     display: flex; 
     flex-direction: row; 
