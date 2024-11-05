@@ -243,7 +243,7 @@ nav {
     justify-content: center;
     flex-wrap: wrap; 
     min-height: 100vh; 
-    background: linear-gradient(#ECEFFE, #CED6FB); 
+    background: linear-gradient(var(--color-light-grey), var(--color-tertiary)); 
     padding: 20px; 
 }
 
@@ -256,6 +256,10 @@ nav {
     gap: 20px;  
 }
 
+
+.card-list .card-link {
+    background: var(--color-white); 
+}
 
 .card-list .card-item {
     list-style: none; 
@@ -285,12 +289,12 @@ nav {
 }
 
 .card-list .card-link .badge {
-    color: #5372F0; 
+    color: var(--color-primary); 
+    background: var(--color-light-grey);
     padding: 8px 16px; 
     font-size: 0.95rem; 
     font-weight: 500; 
     margin: 16px 0 18px; 
-    background: #DDE4FF; 
     width: fit-content; 
     border-radius: 50px; 
 }
@@ -308,14 +312,14 @@ nav {
     margin-top: 16px; 
     padding: 10px 16px; 
     border: none; 
-    background-color: #5372F0; 
-    color: white; 
+    background-color: var(--color-primary); 
+    color: var(--color-white); 
     border-radius: 5px; 
     cursor: pointer; 
 }
 
 .card-list .card-button:hover {
-    background: #0056b3; 
+    background: var(--color-secondary); 
 }
 
 
