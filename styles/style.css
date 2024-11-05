@@ -389,12 +389,13 @@ nav {
 }
 
 .reason {
-    background-color: #fff;
+    background-color: var(--color-light-grey); /* Default background color */
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
+    transition: background-color 0.3s ease; 
 }
+
 
 .reason:hover {
     transform: translateY(-10px);
@@ -465,6 +466,8 @@ a.cta-button{
     font-size: 1rem;
     color: var(--color-dark-grey);
 }
+
+
 
 
 

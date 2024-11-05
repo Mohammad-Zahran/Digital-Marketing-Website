@@ -102,6 +102,38 @@ expertiseCards.forEach((card, index) => {
     }, `-=${0.4 * index}`); 
 });
 
+// Select all reason cards
+const reasonCards = document.querySelectorAll('.reason');
+
+// Define the colors for hover effects
+const hoverColor = 'var(--color-primary)'; // Color when hovered
+
+// Add mouseenter and mouseleave events to each reason card
+reasonCards.forEach(card => {
+    card.addEventListener('mouseenter', () => {
+        // Animate the card on hover
+        gsap.to(card, {
+            scale: 1.05, // Scale up
+            boxShadow: '0 8px 16px rgba(0, 0, 0, 0.2)', // Enhance shadow
+            backgroundColor: hoverColor, // Change background color on hover
+            duration: 0.3,
+            ease: 'power1.out',
+        });
+    });
+
+    card.addEventListener('mouseleave', () => {
+        // Animate the card back to its original state
+        gsap.to(card, {
+            scale: 1, 
+            boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)', 
+            backgroundColor: 'var(--color-light-grey)', 
+            duration: 0.3,
+            ease: 'power1.out',
+        });
+    });
+});
+
+
 // Burger menu functionality
 const burgerMenu = document.querySelector('.burger-menu');
 const navLinks = document.querySelector('.nav-links');
