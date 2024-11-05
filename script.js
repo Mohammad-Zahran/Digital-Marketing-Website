@@ -153,6 +153,25 @@ reasonCards.forEach(card => {
 });
 
 
+// Deliver section accordion animation
+const accordionItems = document.querySelectorAll('.accordion li');
+
+// Trigger animation when the accordion section comes into view
+gsap.from(accordionItems, {
+    scrollTrigger: {
+        trigger: '.deliver-section',
+        start: 'top 80%',
+        end: 'top 50%',
+        scrub: 1,
+        once: true
+    },
+    y: 50, 
+    opacity: 0, 
+    duration: 1, 
+    stagger: 0.3,
+    ease: 'power2.out',
+});
+
 
 // Let's Connect section animation
 const letsConnectSection = document.querySelector('.lets-connect');
