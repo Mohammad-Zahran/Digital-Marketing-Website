@@ -206,3 +206,6 @@ footer .social_icon li a{
     transition: 0.5s;
 }
 
+footer .social_icon li a:hover{
+    transform: translateY(-10px);
+}
